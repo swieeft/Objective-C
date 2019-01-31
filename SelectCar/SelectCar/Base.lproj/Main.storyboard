@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-k2-dIE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla-model-s" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-g8-lnn">
+                                <rect key="frame" x="20" y="393.5" width="335" height="223.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XaK-g8-lnn" secondAttribute="height" multiplier="1.5:1" id="gy2-ps-RrN"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpd-It-M2a">
+                                <rect key="frame" x="0.0" y="70" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pWI-Ag-x5M"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qvd-6T-jMz"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xpd-It-M2a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="15Z-as-0Wv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XaK-g8-lnn" secondAttribute="bottom" constant="50" id="6dK-E1-xoS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pwy-k2-dIE" secondAttribute="bottom" id="8Pv-7m-rYL"/>
+                            <constraint firstAttribute="trailing" secondItem="Pwy-k2-dIE" secondAttribute="trailing" id="IFJ-uY-bE4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpd-It-M2a" secondAttribute="trailing" id="Nul-W2-d8Y"/>
+                            <constraint firstItem="XaK-g8-lnn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Oao-Rq-1TW"/>
+                            <constraint firstItem="Pwy-k2-dIE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aWH-Bh-AEa"/>
+                            <constraint firstItem="Pwy-k2-dIE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nMU-Ed-Uwv"/>
+                            <constraint firstItem="xpd-It-M2a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pPI-Sg-xzq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XaK-g8-lnn" secondAttribute="trailing" constant="20" id="pei-aO-q32"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="XaK-g8-lnn" id="W9D-e5-oy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="3264" height="2448"/>
+        <image name="tesla-model-s" width="1200" height="800"/>
+    </resources>
+</document>
